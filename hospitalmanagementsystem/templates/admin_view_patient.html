@@ -1,0 +1,39 @@
+{% extends 'admin_base.html' %}
+{% block content %}
+{%load static%}
+ <!-- table section start -->
+ <div class="table-container ">
+  <div class="table-center  padding-left-right-twenty-mobile">
+    <table>
+      <thead>
+        <tr >
+          <th colspan="7" class="text-center heading-color">Patient</th>
+        </tr>
+        <tr class="bg-color-black">
+          <th>Name</th>
+          <th>Profile Picture</th>
+          <th>Symptoms</th>
+          <th>Mobile</th>
+          <th>Address</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in patients %}
+      <tr>
+        <td> {{p.get_name}}</td>
+        <td> <img src="{% static p.profile_pic.url %}" alt="Profile Pic" height="40px" width="40px" /></td>
+        <td>{{p.symptoms}}</td>
+        <td>{{p.mobile}}</td>
+        <td>{{p.address}}</td>
+        <td><a class="btn btn-primary btn-xs" href="{% url 'update-patient' p.id  %}"><span class="glyphicon glyphicon-edit"></span></a></td>
+        <td><a class="btn btn-danger btn-xs" href="{% url 'delete-patient-from-hospital' p.id  %}"><span class="glyphicon glyphicon-trash"></span></a></td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+<!-- table section end -->
+
+{% endblock content %}

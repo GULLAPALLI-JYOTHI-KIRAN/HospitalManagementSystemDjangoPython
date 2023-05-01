@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System || Admin Login</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="shortcut icon" href="../static/icons/favicon.svg" type="image/x-icon">
+    <style>
+    </style>
+</head>
+<body>
+    {% include "navbar.html" %}
+    <!-- admin  page login section start --> 
+    <div class="admin-login-page-container">
+        <div class="admin-login-page-center wraper">
+           <div class="page-tile-section">
+            <h4 class="title-wish">Hello Admin</h4>
+            <p class="wish-desc">Welcome to Hospital Management System.</p>
+           </div>
+           <div class="login-info-show-section">
+            <p class="login-desc">You can access various features after Login/SignUp.</p>
+            <div class="sigin-bttn-section">
+                <div class="least-primary-bttn"><a href="adminsignup">SignUp</a></div>
+                <div class="least-primary-bttn"><a href="adminlogin">Login</a></div>
+            </div>
+           </div>
+        </div>
+    </div>
+    <!-- admin login page login section end --> 
+    {% include "branch.html" %}
+    {% include "footer.html" %}
+</body>
+</html>

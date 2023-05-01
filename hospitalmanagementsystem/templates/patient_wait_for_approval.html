@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System || Doctor Login</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="shortcut icon" href="../static/icons/favicon.svg" type="image/x-icon">
+
+    
+</head>
+<body>
+    {% include "navbar.html" %}
+    <!-- admin  page login section start --> 
+    <div class="admin-login-page-container padding-top-bottom-fifty-mobile">
+        <div class="admin-login-page-center wraper">
+           <div class="page-tile-section">
+            <h4 class="title-wish">Hello {{request.user.first_name}}</h4>
+            <p class="wish-desc">Your Account is not approved till now <br>Our Team is checking your profile <br> Soon your Account will be confirmed !!!</p>
+           </div>
+           <div class="login-info-show-section">
+            <p class="login-desc">Check Later</p>
+            <div class="sigin-bttn-section">
+                <div class="least-primary-bttn"><a href="logout">Logout For Now</a></div>
+            </div>
+           </div>
+        </div>
+    </div>
+    <!-- admin login page login section end --> 
+    {% include "branch.html" %}
+    {% include "footer.html" %}
+</body>
+</html>

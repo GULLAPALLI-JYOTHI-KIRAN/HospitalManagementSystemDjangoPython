@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System || Gullapalli Jyothi Kiran</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="shortcut icon" href="../static/icons/favicon.svg" type="image/x-icon">
+
+    <style>
+    </style>
+</head>
+<body>
+    {% include "navbar.html" %}
+    {% include "banner.html"%}
+    <br><br>
+    <br><br>
+    <br><br>
+    <!-- admin  page login section start --> 
+    <div class="admin-login-page-container">
+        <div class="admin-login-page-center wraper">
+           <div class="page-tile-section">
+            <h4 class="title-wish">Your message sent successfully !</h4>
+            <p class="wish-desc">We will respond to your feedback soon</p>
+           </div>
+           <div class="login-info-show-section">
+            <p class="login-desc">Check other features of website !</p>
+            <div class="sigin-bttn-section">
+                <div class="least-primary-bttn"><a href="/">HOME</a></div>
+            </div>
+           </div>
+        </div>
+    </div>
+    <!-- admin login page login section end --> 
+    <br><br>
+    <br><br>
+    <br><br>
+    {% include "footer.html" %}
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+        /* quick geasture css code start */
+.quick-geasture-container{
+    width:100%;
+}
+.quick-geasture-center{
+    width:100%
+}
+.quick-geasture-section{
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.each-geasture{
+    width:100%;
+    
+}
+.each-geasture:nth-child(1){
+    border-right: 3px black solid;
+    border-bottom: 3px black solid;
+}
+.each-geasture:nth-child(3){
+    border-right: 3px black solid;
+}
+
+.each-geasture:nth-child(2){
+    border-bottom: 3px black solid;
+}
+.geasture-icon a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+}
+.geasture-icon img{
+    width: 50px;
+}
+.geasture-desc{
+    font-size: 1.6rem;
+    text-align: center;
+}
+/* two column grid layout */
+.two-column-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* quick geasture css code end */
+@media screen and (min-width:992px) {
+    /* quick-geasture css code */
+    /* two column grid layout */
+    .two-column-layout{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .each-geasture{
+        border-bottom:3px black solid ;
+    }
+    .each-geasture:nth-child(2){
+        border-right: 3px black  solid;
+    }
+    .geasture-desc{
+        font-size: 2.2rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- quick geasture sections start -->
+    <div class="quick-geasture-container">
+        <div class="quick-geasture-center">
+            <section class="quick-geasture-section two-column-layout padding-left-right-twenty-mobile">
+                <article class="each-geasture padding-top-bottom-ten-mobile padding-top-bottom-ten-mobile">
+                    <div class="geasture-icon"><a href="contactus"><img src="../static/icons/emergency-call-icon.svg" alt="emergency-call-icon"><p class="geasture-desc">Emergency</p></a></div>
+                </article>
+                <article class="each-geasture padding-top-bottom-ten-mobile padding-top-bottom-ten-mobile">
+                    <div class="geasture-icon"><a href="patientclick"><img src="../static/icons/enquiry-icon.svg" alt="enquiry-icon"><p class="geasture-desc">Enquiry</p></a></div>
+                </article>
+                <article class="each-geasture padding-top-bottom-ten-mobile padding-top-bottom-ten-mobile">
+                    <div class="geasture-icon"><a href="contactus"><img src="../static/icons/medical-service-icon.svg" alt="medical-service-icon"><p class="geasture-desc">Medical Services</p></a></div>
+                </article>
+                <article class="each-geasture padding-top-bottom-ten-mobile padding-top-bottom-ten-mobile">
+                    <div class="geasture-icon"><a href="#"><img src="../static/icons/healthpackages-icon.svg" alt="healthpackages-icon"><p class="geasture-desc">Health Packages</p></a></div>
+                </article>
+            </section>
+        </div>
+    </div>
+    <!-- quick geasture sections end -->
+</body>
+</html>

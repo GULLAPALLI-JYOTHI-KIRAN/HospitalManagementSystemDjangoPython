@@ -1,0 +1,674 @@
+{% extends 'homebase.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+        /* our insfrastructure   css code start */
+.infrastructure-container{
+    width:100%;
+}
+.infrastructure-center{
+    width:100%
+}
+.infrastructure-section{
+    width:100%;
+    margin-top: 40px;
+}
+.hospital-blue-print{
+    width:100%;
+}
+.hospital-blue-print .img-component{
+    aspect-ratio: 650/520;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.hospital-blue-print .img-component img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.hospital-infromation{
+    width:100%
+}
+.hospital-details{
+    font-size: 1.4rem;
+    line-height: 1.3;
+    text-align: left;
+}
+.secondary-bttn{
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 13px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #5BC0F8;
+}
+.secondary-bttn a{
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+.secondary-bttn:active{
+    transform: scale(0.8);
+    transition: all .3s linear;
+}
+.secondary-bttn:hover{
+    transform: translateX(10px);
+    transition: all .3s linear;
+    border-radius: 10px;
+}
+/* our insfrastructure   css code end */
+/* our facilities css code start */
+.facilities-container{
+    width:100%;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+.facilities-center{
+    width: 100%;background-color: #393E46;
+}
+.section-heading{
+    width:100%;
+}
+.section-title{
+    text-align: center;
+    font-size: 2.1rem;
+    letter-spacing: 0.2rem;
+    font-weight: 800;
+    color: #C58940;
+}
+.underline{
+    margin: auto;
+    margin-top: 16px;
+    width: 30%;
+    height: 8px;
+    background-color: #E5BA73;
+    border-radius: 5px;
+}
+.facilities-section{
+    background-color: #393E46;
+    width:100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 10px;
+    z-index: 3;
+    overflow: hidden;
+    scroll-behavior: smooth;
+
+}
+.facilities-section::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+.facilities-section::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+.each-facility{
+    width: 400px;
+    height: 290px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 5px #393E46 solid;
+    background-color: #FFFFFF;
+}
+.each-facility .img-component{
+    aspect-ratio: 650/350;
+    overflow: hidden;
+}
+.each-facility .img-component img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.facility-desc{
+    width:100%;
+    margin-top: 15px;
+}
+.facility-desc .desc{
+    text-align: center;
+    font-size: 1.9rem;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+}
+.each-facility:hover{
+    transform: translateX(-15px);
+    -webkit-box-shadow: 0px 3px 14px 8px rgba(252,252,252,1);
+    -moz-box-shadow: 0px 3px 14px 8px rgba(252,252,252,1);
+    box-shadow: 0px 3px 14px 8px rgba(252,252,252,1);
+    transition: all .3s linear;
+}
+.each-facility .img-component img:hover{
+    transform: scale(1.1);
+    transition: all .3s linear;
+}
+/* grid layout */
+.three-column-layout{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    column-gap: 50px;
+}
+/* our facilities css code end*/
+/* quick geasture css code start */
+.quick-geasture-container{
+    width:100%;
+}
+.quick-geasture-center{
+    width:100%
+}
+.quick-geasture-section{
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.each-geasture{
+    width:100%;
+    
+}
+.each-geasture:nth-child(1){
+    border-right: 3px black solid;
+    border-bottom: 3px black solid;
+}
+.each-geasture:nth-child(3){
+    border-right: 3px black solid;
+}
+
+.each-geasture:nth-child(2){
+    border-bottom: 3px black solid;
+}
+.geasture-icon a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+}
+.geasture-icon img{
+    width: 50px;
+}
+.geasture-desc{
+    font-size: 1.6rem;
+    text-align: center;
+}
+/* two column grid layout */
+.two-column-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* quick geasture css code end */
+/* our branches css code start */
+.hospital-branch-container{
+    width:100%;
+}
+.hospital-branch-center{
+    width: 100%;
+}
+.hospital-branch-section{
+    width:100%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.each-branch{
+    border: 5px black solid;
+    border-radius: 10px;
+}
+.branch-main-component{
+    width: 100%;
+    position: relative;
+}
+.branch-img-component{
+    aspect-ratio: 650/450;
+    overflow: hidden;
+}
+.branch-img-component img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+.branch-img-component img:hover{
+    transform: scale(1.2);
+    transition: all .3s linear;
+}
+.branch-location{
+    cursor: pointer;
+    background-color: white;
+    position: absolute;
+    bottom: -20px;
+    left:50%;
+    transform: translateX(-50%);
+    border-radius: 35px;
+    padding: 5px 9px;
+    border: 3px black solid;
+}
+.branch-location img{
+    display: inline-block;
+    width: 50px;
+}
+.branch-location img:hover{
+    transform: rotate(60deg);
+    transition: all .3s linear;
+}
+.branch-details{
+    width: 100%;
+}
+.branch-title{
+    text-align: center;
+    font-size: 2.1rem;
+    letter-spacing: 0.1rem;
+}
+.branch-address{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.branch-desc{
+    font-size: 1.6rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+.each-branch:hover{
+    transform: translateY(-5px);
+    -webkit-box-shadow: 0px 3px 14px 8px rgba(18,17,18,1);
+    -moz-box-shadow: 0px 3px 14px 8px rgba(18,17,18,1);
+    box-shadow: 0px 3px 14px 8px rgba(18,17,18,1);
+    transition: all .3s linear;
+}
+/* our branches css code end */
+/* our specialities css code start */
+.specialities-container{
+    width:100%;
+}
+.specialities-center{
+    width:100%;
+}
+/* four column layout grid */
+.four-column-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 10px;
+}
+.each-specialities{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px black solid;
+    border-radius: 5px;
+}
+.specialities-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+.specialities-info img{
+    width: 50px;
+}
+.specialities-desc{
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}
+.each-specialities:hover{
+    transform: translateY(-5px);
+    box-shadow: 1px 17px 12px -5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 17px 12px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 17px 12px -5px rgba(0,0,0,0.75);
+    background-color: brown;
+    color: white;
+    transition: all .3s linear;
+}
+.specialities-bttn{
+    cursor: pointer;
+    padding: 15px 13px;
+    margin: auto;
+    width: 150px;
+    background-color:#5BC0F8;
+    border-radius: 10px;
+}
+.specialities-bttn a{
+    text-align: center;
+    font-size: 1.3rem;
+    color: white;
+    letter-spacing: 0.2rem;
+}
+.specialities-bttn:active{
+    transform: scale(0.9);
+    transition: all .3s linear;
+}
+/* our specialities css code end */
+/* our moto css code start */
+.moto-container{
+    width:100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background-color: brown;
+}
+.moto-center{
+    width:100%;
+}
+.moto-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* one  column layout grid  */
+.one-column-layout{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.each-moto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    border-radius: 5px;
+
+}
+.each-moto:nth-child(2){
+    border-top: 3px black solid;;
+}
+.moto-title{
+    color: white;
+    font-size: 1.9rem;
+    letter-spacing: 0.3rem;
+}
+.moto-log img{
+    width: 50px;
+}
+.moto-desc{
+    color: white;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+/* our moto css code end */
+@media screen and (min-width:992px) {
+    /* our facilites css code */
+    /* grid layout */
+    .three-column-layout{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        row-gap: 40px;
+        column-gap: 30px;
+    }
+    .each-facility{
+        width: 600px;
+        height: 390px;
+        flex-shrink: 0;
+    }
+    .section-title{
+        font-size: 2.9rem;
+    }
+    .underline{
+        width: 10%;
+    }
+    .facilities-section{
+        margin-top: 50px;
+    }
+    .facility-desc .desc{
+        font-size: 2.3rem;
+    }
+    /* infrastructure css code */
+    .hospital-blue-print .img-component{
+        aspect-ratio:520/210;
+    }
+    /* quick-geasture css code */
+    /* two column grid layout */
+    .two-column-layout{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .each-geasture{
+        border-bottom:3px black solid ;
+    }
+    .each-geasture:nth-child(2){
+        border-right: 3px black  solid;
+    }
+    .geasture-desc{
+        font-size: 2.2rem;
+    }
+    /* four column layout grid */
+    .four-column-layout{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        row-gap: 15px;
+        column-gap: 10px;
+    }
+    .specialities-bttn{
+        width:150px;
+    }
+    .specialities-bttn:hover{
+        transform: translateX(10px);
+        transition: all .3s linear;
+    }
+    /* our moto css code */
+    /* one  column layout grid  */
+    .one-column-layout{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        justify-content: center;
+        align-items: start;
+    }
+    .each-moto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .each-moto:nth-child(1){
+        padding-right: 20px;
+    }
+    .each-moto:nth-child(2){
+        border-top:none ;
+        border-left: 5px black solid;
+        padding-left: 20px;
+    }
+    .moto-log img{
+        width: 90px;
+    }
+    .moto-title{
+        font-size: 2.5rem;
+    }
+    .moto-desc{
+        font-size: 1.9rem;
+    }
+}
+    </style>
+</head>
+    
+    <!-- infrastructure section strat -->
+    <div class="infrastructure-container">
+        <div class="infrastructure-center">
+            <div class="section-heading padding-top-bottom-thirty-mobile ">
+                <h3 class="section-title">Our Infrastructure</h3>
+                <div class="underline"></div>
+            </div>
+            <section class="infrastructure-section padding-left-right-twenty-mobile padding-left-right-thirty-mobile">
+                <article class="hospital-blue-print">
+                    <div class="img-component">
+                        <img src="../static/asserts/hospital-infrastructure.jpg" alt="hospital-infrastructure">
+                    </div>
+                    <div class="hospital-infromation">
+                        <p class="hospital-details">
+                            We are one of the largest corporate healthcare groups in India, with hospitals in Telangana, Andhra Pradesh & Maharashtra providing multi-disciplinary integrated healthcare services with a focus on tertiary and quaternary healthcare at affordable cost. We operate 12 multi-specialty hospitals under the “HMS Hospitals” brand, with an aggregate bed capacity of over 4,000 beds. We offer a comprehensive range of healthcare services across over 25 specialties and super specialties, including cardiac sciences, oncology, neurosciences, gastric sciences, orthopaedics, organ transplantation, renal sciences and mother & child care. 
+                            <!-- We have grown from a single hospital to a chain of multi-specialty hospitals through organic growth and strategic acquisitions under the leadership of Dr. Bhaskara Rao Bollineni, our founder and Managing Director, and Dr. Abhinay Bollineni, our Executive Director and CEO. Our first hospital in our network was established in Nellore in 2000 and has a capacity of approximately 200 beds. Our flagship hospital at Secunderabad is one of the largest private hospitals in India at a single location (excluding medical colleges), according to the CRISIL Report, with a capacity of 1,000 beds. We have significantly expanded our hospital network in recent years through our acquisitions of hospitals in Ongole in Fiscal Year 2017, Vizag and Anantapur in Fiscal Year 2019, Kurnool in Fiscal Year 2020, Sunshine Hospitals in Fiscal Year 2021 and Nagpur (Kingsway Hospitals) in Fiscal Year2022 . Approximately one-third of our 4000 beds were launched in the last four to five years. We strive to provide quality service to more patients, and we believe we have scope for additional patients and improved occupancy rates. We strategically focus on the southern Indian healthcare market where we have a strong understanding of regional nuances, customer culture, and the mindset of medical professionals and where there is a significant and growing need for quality and affordable healthcare services. Each of our hospitals also has integrated diagnostic services and pharmacies that cater to our patients. -->
+                            <div class="secondary-bttn"><a href="aboutus">Read More</a></div>
+                        </p>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+    <!-- infrastructure section end -->
+    {%include 'moto.html'%}
+    <!-- our specialities section start -->
+    <div class="specialities-container">
+        <div class="specialities-center wraper">
+            <div class="section-heading padding-top-bottom-thirty-mobile ">
+                <h3 class="section-title">Our Specialities</h3>
+                <div class="underline"></div>
+            </div>
+            <section class="specialities-section four-column-layout padding-left-right-twenty-mobile padding-top-bottom-fifty-mobile">
+                <article class="each-specialities padding-top-bottom-thirty-mobile">
+                    <div class="specialities-info">
+                        <img src="../static/asserts/neurology.png" alt="neurology">
+                    <p class="specialities-desc">Neurology</p>
+                    </div>
+                </article>
+                <article class="each-specialities padding-top-bottom-thirty-mobile">
+                    <div class="specialities-info">
+                        <img src="../static/asserts/cardiology.png" alt="cardiology">
+                    <p class="specialities-desc">Cardiology</p>
+                    </div>
+                </article>
+                <article class="each-specialities padding-top-bottom-thirty-mobile">
+                    <div class="specialities-info">
+                        <img src="../static/asserts/surgical-gastroenterology.png" alt="surgical-gastroenterology">
+                    <p class="specialities-desc">Surgical Gastroenterology</p>
+                    </div>
+                </article>
+                <article class="each-specialities padding-top-bottom-thirty-mobile">
+                    <div class="specialities-info">
+                        <img src="../static/asserts/bariatric-surgery.png" alt="bariatric-surgery">
+                    <p class="specialities-desc">Bariatric Surgery</p>
+                    </div>
+                </article>
+                <article class="each-specialities padding-top-bottom-thirty-mobile">
+                    <div class="specialities-info">
+                        <img src="../static/asserts/neuro-surgery.png" alt="neuro-surgery">
+                    <p class="specialities-desc">Neuro Surgery</p>
+                    </div>
+                </article>
+                <article class="each-specialities padding-top-bottom-thirty-mobile">
+                    <div class="specialities-info">
+                        <img src="../static/asserts/pediatric-neurology.png" alt="pediatric-neurology">
+                    <p class="specialities-desc">Pediatric Neurology</p>
+                    </div>
+                </article>
+                <article class="each-specialities padding-top-bottom-thirty-mobile">
+                    <div class="specialities-info">
+                        <img src="../static/asserts/neuro-psychiatry.png" alt="neuro-psychiatry">
+                    <p class="specialities-desc">Neuro Psychiatry</p>
+                    </div>
+                </article>
+                <article class="each-specialities padding-top-bottom-thirty-mobile">
+                    <div class="specialities-info">
+                        <img src="../static/asserts/cardiothoracic.png" alt="cardiothoracic">
+                    <p class="specialities-desc">Cardiothoracic</p>
+                    </div>
+                </article>
+            </section>
+            <div class="specialities-bttn"><a href="service">View More</a></div>
+        </div>
+    </div>
+    <!-- our specialities section end -->
+    {% include "facilities.html" %}
+    <!-- doctors section start -->
+    <div class="doctors-container">
+        <div class="doctors-center wraper">
+            <div class="section-heading padding-top-bottom-thirty-mobile ">
+                <h3 class="section-title">Our Doctors</h3>
+                <div class="underline"></div>
+                <section class="doctors-section three-column-layout padding-left-right-twenty-mobile padding-top-bottom-fifty-mobile">
+                    <article class="each-doctor-profile padding-left-right-ten-mobile padding-top-bottom-twenty-mobile">
+                        <div class="doctor-img-component">
+                            <img src="../static/asserts/doctor-1.jpg" alt="doctor-1">
+                        </div>
+                        <div class="doctor-details">
+                            <h3 class="doctor-name">Dr. Siddhartha Mukherjee</h3>
+                            <h5 class="doctor-title">Gynaecologist</h5>
+                            <p class="doctor-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit provident possimus sint ipsam, amet voluptatem reprehenderit, eligendi dolores illo eius consectetur nam corrupti voluptatum maiores reiciendis dolore labore animi perspiciatis!</p>
+                        </div>
+                    </article>
+                    <article class="each-doctor-profile padding-left-right-ten-mobile padding-top-bottom-twenty-mobile">
+                        <div class="doctor-img-component">
+                            <img src="../static/asserts/doctor-2.jpg" alt="doctor-2">
+                        </div>
+                        <div class="doctor-details">
+                            <h3 class="doctor-name">Dr. Viraj Godbole</h3>
+                            <h5 class="doctor-title">Ophthalmologist</h5>
+                            <p class="doctor-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit provident possimus sint ipsam, amet voluptatem reprehenderit, eligendi dolores illo eius consectetur nam corrupti voluptatum maiores reiciendis dolore labore animi perspiciatis!</p>
+                        </div>
+                    </article>
+                    <article class="each-doctor-profile padding-left-right-ten-mobile padding-top-bottom-twenty-mobile">
+                        <div class="doctor-img-component">
+                            <img src="../static/asserts/doctor-3.jpg" alt="doctor-3">
+                        </div>
+                        <div class="doctor-details">
+                            <h3 class="doctor-name">Dr. Amber Leis</h3>
+                            <h5 class="doctor-title">Psychiatrist</h5>
+                            <p class="doctor-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit provident possimus sint ipsam, amet voluptatem reprehenderit, eligendi dolores illo eius consectetur nam corrupti voluptatum maiores reiciendis dolore labore animi perspiciatis!</p>
+                        </div>
+                    </article>
+                    <article class="each-doctor-profile padding-left-right-ten-mobile padding-top-bottom-twenty-mobile">
+                        <div class="doctor-img-component">
+                            <img src="../static/asserts/doctor-4.jpg" alt="doctor-4">
+                        </div>
+                        <div class="doctor-details">
+                            <h3 class="doctor-name">Dr. Aaliya Yaqub</h3>
+                            <h5 class="doctor-title">Surgeon</h5>
+                            <p class="doctor-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit provident possimus sint ipsam, amet voluptatem reprehenderit, eligendi dolores illo eius consectetur nam corrupti voluptatum maiores reiciendis dolore labore animi perspiciatis!</p>
+                        </div>
+                    </article>
+                    <article class="each-doctor-profile padding-left-right-ten-mobile padding-top-bottom-twenty-mobile">
+                        <div class="doctor-img-component">
+                            <img src="../static/asserts/doctor-5.jpg" alt="doctor-5">
+                        </div>
+                        <div class="doctor-details">
+                            <h3 class="doctor-name">Dr. Yogita Musale</h3>
+                            <h5 class="doctor-title">cardiologists</h5>
+                            <p class="doctor-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit provident possimus sint ipsam, amet voluptatem reprehenderit, eligendi dolores illo eius consectetur nam corrupti voluptatum maiores reiciendis dolore labore animi perspiciatis!</p>
+                        </div>
+                    </article>
+                    <article class="each-doctor-profile padding-left-right-ten-mobile padding-top-bottom-twenty-mobile">
+                        <div class="doctor-img-component">
+                            <img src="../static/asserts/doctor-6.jpg" alt="doctor-6">
+                        </div>
+                        <div class="doctor-details">
+                            <h3 class="doctor-name">Dr. Nikhil Nikam</h3>
+                            <h5 class="doctor-title"> ENT specialists</h5>
+                            <p class="doctor-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit provident possimus sint ipsam, amet voluptatem reprehenderit, eligendi dolores illo eius consectetur nam corrupti voluptatum maiores reiciendis dolore labore animi perspiciatis!</p>
+                        </div>
+                    </article>
+                </section>
+                <div class="specialities-bttn"><a href="doctor">See More</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- doctors section end -->
+    {% include "testimonial.html" %}
+    {% include "branch.html" %}
+    {% include "footer.html" %}
+{% endblock content %}
+<!-- Enquiry
+If you have any questions simply use the
+following contact details. -->
+<!-- Health Packages
+Looking for an overall health check-up? -->
+<!-- Packages
+Modern building with state-of-the-art Health Packages enable very ill persons
+to receive medical care that meets the highest international standards.. -->

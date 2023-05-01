@@ -1,0 +1,34 @@
+{% extends 'doctor_base.html' %}
+{% load static %}
+{% block content %}
+<br><br>
+<div class="dashboard-container">
+  <div class="dashboard-center wraper">
+    <section class="dashboard-section dashboard-three-column-layout padding-top-bottom-fifty-mobile padding-left-right-twenty-mobile">
+      <article class="each-dashboard padding-left-right-twenty-mobile padding-top-bottom-thirty-mobile">
+        <div class="dashboard-info">
+          <a href="doctor-view-patient">
+            <h5 class="dashboard-counting">Your Patient Record</h5>
+          </a>
+        </div>
+        <div class="dash-img-component">
+          <img src="../static/asserts/patient-icon.png" alt="patient-icon">
+        </div>
+      </article>
+      <article class="each-dashboard padding-left-right-twenty-mobile padding-top-bottom-thirty-mobile">
+        <div class="dashboard-info">
+          <a href="doctor-view-discharge-patient">
+            <h5 class="dashboard-counting">Your Discharged Patient</h5>
+          </a>
+        </div>
+        <div class="dash-img-component">
+          <img src="../static/asserts/discharge-icon.png" alt="discharge-icon">
+        </div>
+      </article>
+      
+    </section>
+  </div>
+</div>
+
+<br><br><br><br><br><br><br>
+{% endblock content %}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <style>
+    .dashboard-container{
+      width:100%;
+    }
+    .dashboard-center{
+      width: 100%;
+    }
+    .dashboard-three-column-layout{
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+    .each-dashboard{
+      border: 5px white solid;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      column-gap: 20px;
+      background-color: #FF6000;
+      border-radius: 5px;
+    }
+    .dashboard-info{
+      width: 100%;
+    }
+    .dashboard-counting{
+      font-size: 1.5rem;
+      color: #3C3C3C;
+    }
+    .dashboard-counting-section{
+      font-size: 1.3rem;
+      color: white;
+      text-align: justify;
+      
+    }
+    .dashboard-desc{
+      font-size: 1.2rem;
+      color: white;
+    }
+    .each-dashboard:hover{
+      transform: translateY(-5px);
+      box-shadow: 1px -1px 158px 12px rgba(0,0,0,0.6);
+      -webkit-box-shadow: 1px -1px 158px 12px rgba(0,0,0,0.6);
+      -moz-box-shadow: 1px -1px 158px 12px rgba(0,0,0,0.6);
+      transition: all .3s linear;
+    }
+    .dash-img-component{
+      width: 50px;
+      overflow: hidden;
+    }
+    .dash-img-component img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+    .each-dashboard:nth-child(2){
+      background-color: #FFA559;
+    }
+    .each-dashboard:nth-child(3){
+      background-color: #0081C9;
+    }
+    .each-dashboard:nth-child(4){
+      background-color: #C58940;
+    }
+    .each-dashboard:nth-child(5){
+      background-color: #0081C9;
+    }
+    .each-dashboard:nth-child(6){
+      background-color: #0081C9;
+    }
+    .table-center{
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      overflow: scroll;
+    }
+    table{
+      border-radius: 5px;
+    }
+    table ,th ,td {
+      border: 2px black solid;
+
+      border-collapse: collapse;
+    }
+
+    th ,td{
+      padding: 10px 20px;
+    }
+    .text-center{
+      text-align: center;
+    }
+    .heading-color{
+      font-size: 1.4rem;
+      letter-spacing: 0.2rem;
+      color: white;
+      background-color: #0081C9;
+    }
+    .bg-color-black{
+      background-color: #3C3C3C;
+      color: white;
+    }
+    @media screen  and (min-width:992px){
+      .dashboard-three-column-layout{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        row-gap: 20px;
+        column-gap: 20px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="dashboard-center wraper">
+      <section class="dashboard-section dashboard-three-column-layout padding-top-bottom-fifty-mobile padding-left-right-twenty-mobile">
+        <article class="each-dashboard padding-left-right-twenty-mobile padding-top-bottom-thirty-mobile">
+          <div class="dashboard-info">
+            <h3 class="dashboard-counting">{{doctorName}}</h3>
+            <h4 class="dashboard-counting-section">Doctor Name</h4>
+          </div>
+          <div class="dash-img-component">
+            <img src="../static/asserts/doctor-icon.png" alt="doctor-icon">
+          </div>
+        </article>
+        <article class="each-dashboard padding-left-right-twenty-mobile padding-top-bottom-thirty-mobile">
+          <div class="dashboard-info">
+            <h3 class="dashboard-counting">{{symptoms}}</h3>
+            <h4 class="dashboard-counting-section">Symptoms</h4>
+          </div>
+          <div class="dash-img-component">
+            <img src="../static/asserts/symptom-icon.png" alt="symptom-icon">
+          </div>
+        </article>
+        <article class="each-dashboard padding-left-right-twenty-mobile padding-top-bottom-thirty-mobile">
+          <div class="dashboard-info">
+            <h3 class="dashboard-counting">{{doctorMobile}}</h3>
+            <h4 class="dashboard-counting-section">Doctor Mobile</h4>
+          </div>
+          <div class="dash-img-component">
+            <img src="../static/asserts/doctorMobile-icon.png" alt="doctorMobile-icon">
+          </div>
+        </article>
+        <article class="each-dashboard padding-left-right-twenty-mobile padding-top-bottom-thirty-mobile">
+          <div class="dashboard-info">
+            <h3 class="dashboard-counting">{{doctorAddress}}</h3>
+            <h4 class="dashboard-counting-section">Doctor Address</h4>
+          </div>
+          <div class="dash-img-component">
+            <img src="../static/asserts/doctorAddress-icon.png" alt="doctorAddress-icon">
+          </div>
+        </article>
+        <article class="each-dashboard padding-left-right-twenty-mobile padding-top-bottom-thirty-mobile">
+          <div class="dashboard-info">
+            <h3 class="dashboard-counting">{{doctorDepartment}}</h3>
+            <h4 class="dashboard-counting-section">Doctor Department</h4>
+          </div>
+          <div class="dash-img-component">
+            <img src="../static/asserts/doctorDepartment-icon.png" alt="doctorDepartment-icon">
+          </div>
+        </article>
+        <article class="each-dashboard padding-left-right-twenty-mobile padding-top-bottom-thirty-mobile">
+          <div class="dashboard-info">
+            <h3 class="dashboard-counting">{{admitDate}}</h3>
+            <h4 class="dashboard-counting-section">Admit Date</h4>
+          </div>
+          <div class="dash-img-component">
+            <img src="../static/asserts/appointment-icon.png" alt="appointment-icon">
+          </div>
+        </article>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

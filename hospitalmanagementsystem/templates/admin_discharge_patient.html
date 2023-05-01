@@ -1,0 +1,34 @@
+{% extends 'admin_base.html' %}
+
+{% block content %}
+ <!-- table section start -->
+ <div class="table-container">
+  <div class="table-center  padding-left-right-twenty-mobile">
+    <table>
+      <thead>
+        <tr >
+          <th colspan="4" class="text-center heading-color">Discharge Patient</th>
+        </tr>
+        <tr class="bg-color-black">
+          <th>Name</th>
+          <th>Symptoms</th>
+          <th>Mobile</th>
+          <th>Discharge</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in patients %}
+      <tr>
+        <td> {{p.get_name}}</td>
+        <td>{{p.symptoms}}</td>
+        <td>{{p.mobile}}</td>
+        <td><a class="btn btn-primary btn-xs" href="{% url 'discharge-patient' p.id  %}"><span class="glyphicon glyphicon-log-out"></span></a></td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  </div>
+<!-- table section end -->
+
+{% endblock content %}

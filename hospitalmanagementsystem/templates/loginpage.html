@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System || Gullapalli Jyothi Kiran</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="shortcut icon" href="../static/icons/favicon.svg" type="image/x-icon">
+
+</head>
+<body>
+    {% include "navbar.html" %}
+    <!-- banner page section start -->
+    <div class="banner-page-container">
+        <div class="banner-page-center">
+            <div class="img-component">
+                <img src="../static/asserts/banner-image.jpg" alt="banner-image">
+            </div>
+            <div class="banner-page-section padding-top-bottom-fifty-mobile">
+                <div class="banner-page-desc">
+                    <p class="desc padding-left-right-ten-mobile">“Time and health are two precious assets that we don’t recognize and appreciate until they have been depleted.”  – Denis Waitley </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner page section end -->
+    <!-- Login panel section start -->
+    <div class="login-panel-container">
+        <div class="login-panel-center wraper">
+            <div class="section-heading padding-top-bottom-thirty-mobile ">
+                <h3 class="section-title">Login As</h3>
+                <div class="underline"></div>
+            </div>
+            <section class="login-section three-column-layout padding-left-right-twenty-mobile padding-top-bottom-fifty-mobile">
+                <article class="each-login padding-left-right-ten-mobile padding-top-bottom-thirty-mobile">
+                    <div class="login-img-component">
+                        <img src="../static/asserts/admin-login.png" alt="admin-login">
+                    </div>
+                    <div class="login-secondary-bttn"><a href="adminclick">Admin</a></div>
+                </article>
+                <article class="each-login padding-left-right-ten-mobile padding-top-bottom-thirty-mobile">
+                    <div class="login-img-component">
+                        <img src="../static/asserts/doctor-login.png" alt="doctor-login">
+                    </div>
+                    <div class="login-secondary-bttn"><a href="doctorclick">Doctor</a></div>
+                </article>
+                <article class="each-login padding-left-right-ten-mobile padding-top-bottom-thirty-mobile">
+                    <div class="login-img-component">
+                        <img src="../static/asserts/user-login.png" alt="user-login">
+                    </div>
+                    <div class="login-secondary-bttn"><a href="patientclick">Patient</a></div>
+                </article>
+            </section>
+        </div>
+    </div>
+    <!-- Login panel section end -->
+    {% include "branch.html" %}
+    {% include "footer.html" %}
+</body>
+</html>

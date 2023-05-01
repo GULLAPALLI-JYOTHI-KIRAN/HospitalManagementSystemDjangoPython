@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+        /* footer css code start */
+.footer-container{
+    width:100%;
+    background-image: url('../static/asserts/footer-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 30% 40%;
+    background-clip: border-box;
+    position: relative;
+    z-index: 5;
+}
+.footer-container::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    left:0px;
+    background-color: rgba(88, 87, 87, 0.382);
+    z-index: -2;
+}
+.footer-center{
+    width:100%
+}
+.footer-section{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.footer-nav-links-main{
+    width:100%;
+}
+.footer-nav-links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 9px;
+    justify-content: center;
+    align-items: center;
+}
+.footer-nav-link{
+    font-size: 1.6rem;
+    letter-spacing: 0.0001rem;
+    color: white !important;
+    padding-bottom: 5px;
+    border-radius: 3px;
+}
+.footer-nav-link .active{
+    border-bottom: 3px red solid;
+}
+.footer-nav-link:hover{
+    border-bottom:3px red solid;
+}
+.footer-social-links-main{
+    width: 100%;
+}
+.footer-social-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+.footer-social-link{
+    padding: 5px 7px;
+    border: 3px white solid;
+    border-radius: 5px;
+}
+.footer-social-link img{
+    width: 30px;
+}
+.footer-social-link:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px white;
+    -moz-box-shadow:0px 0px 20px white;
+    -webkit-box-shadow:0px 0px 20px white;
+    transition: all .3s linear;
+}
+.footer-desc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+.footer-desc .desc{
+    text-align: center;
+    text-align-last: center;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: white;
+}
+/* footer css code end */
+@media screen and (min-width:992px) {
+    /* Footer css code */
+    .footer-container{
+        background-position: 40% 30%;
+    }
+    .footer-nav-links{
+        display: flex;
+        column-gap: 30px;
+    }
+    .footer-nav-link{
+        font-size: 2.3rem;
+    }
+    .footer-social-links{
+        display: flex;
+        flex-direction: row;
+        column-gap: 30px;
+    }
+    .footer-social-link img{
+        width: 45px;
+    }
+    .footer-desc .desc{
+        font-size: 2.3rem;
+    }
+}
+    </style>
+</head>
+<!-- footer section start -->
+<div class="footer-container">
+    <div class="footer-center wraper">
+        <div class="footer-section padding-top-bottom-thirty-mobile">
+            <div class="footer-nav-links-main">
+                <ul class="footer-nav-links padding-top-bottom-twenty-mobile">
+                    <li><a href="/" class="footer-nav-link">Home</a></li>
+                    <li><a href="aboutus" class="footer-nav-link"> About</a></li>
+                    <li><a href="doctor" class="footer-nav-link">Doctors</a></li>
+                    <li><a href="service" class="footer-nav-link">Services</a></li>
+                    <li><a href="contactus" class="footer-nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social-links-main">
+                <ul class="footer-social-links">
+                    <li class="footer-social-link"><a href="#"><img src="../static/icons/linkedin-icon.svg" alt="linkedin-icon"></a></li>
+                    <li class="footer-social-link"><a href="#"><img src="../static/icons/whatsapp-icon.svg" alt="whatsapp-icon"></a></li>
+                    <li class="footer-social-link"><a href="#"><img src="../static/icons/google-mail-icon.svg" alt="mail-icon"></a></li>
+                    <li class="footer-social-link"><a href="#"><img src="../static/icons/facebook-icon.svg" alt="facebook-icon"></a></li>
+                </ul>
+            </div>
+            <div class="footer-desc padding-left-right-ten-mobile">
+                <p class="desc">Copyright 2022 -<span id="getdata"></span>,Developed By Gullapalli Jyothi Kiran.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer section end -->
+ <!-- javascript section start -->
+ <script src="../static/js/footer.js"></script>
+ <!-- javascript section end-->
+</html>

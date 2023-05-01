@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin || {{request.user.first_name}}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="shortcut icon" href="../static/icons/favicon.svg" type="image/x-icon">
+
+  <style>
+ a{
+        text-decoration: none !important;
+        }
+    .nav-log-section{
+        border: none !important;
+        box-shadow: none !important;
+    }
+    .nav-links-main{
+        align-self: center;
+    }
+    .nav-log-section h2{
+        text-transform: capitalize !important;
+        color: white !important;
+    }
+    .asidebar-log-section{
+        border: none !important;
+        box-shadow: none!important;
+    }
+    .asidebar-log-section h2{
+        text-align: center;
+        text-transform: capitalize !important;
+        color: white !important;
+    }
+    .banner-page-center .img-component{
+        aspect-ratio: 350/150 !important;
+    }
+    .nav-sign-link a{
+        text-align: center !important;
+        color:white !important;
+    }
+    /* admin tabels css code */
+.table-section{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    overflow: scroll;
+    justify-content: center;
+    align-items: center;
+}
+.table-center{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+  }
+  table{
+    border-radius: 5px;
+  }
+  table ,th ,td {
+    border: 2px black solid;
+
+    border-collapse: collapse;
+  }
+
+  th ,td{
+    padding: 10px 20px;
+  }
+  .text-center{
+    text-align: center;
+  }
+  .heading-color{
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+    color: white;
+    background-color: #0081C9;
+  }
+  .bg-color-black{
+    background-color: #3C3C3C;
+    color: white;
+  }
+  
+  @media screen and  (min-width:992px) {
+    .table-section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 30px;
+        column-gap: 40px;
+        overflow: scroll;
+        align-items: start;
+        justify-items: center;
+    }
+  }
+  </style>
+</head>
+<body>
+    <!-- Nav-bar section start -->
+    <nav class="nav-bar-container">
+        <div class="nav-center  padding-left-right-twenty-mobile padding-top-bottom-twenty-mobile">
+            <div class="nav-log-section">
+                <a href="patient-dashboard"><h2>{{request.user.first_name}}</h2></a>
+            </div>
+            <div class="hambuger-menu">
+                <img src="../static/icons/hamburger-menu-icon.svg" alt="hambuger-menu" id="menu-bttn">
+            </div>
+            <div class="nav-links-main">
+                <ul class="nav-links">
+                    <li><a href="patient-dashboard" class="nav-link">Dashboard</a></li>
+                    <li><a href="patient-view-doctor" class="nav-link">Doctor</a></li>
+                    <li><a href="patient-appointment" class="nav-link">Appointment</a></li>
+                    <li><a href="patient-discharge" class="nav-link">Discharge</a></li>
+                </ul>
+            </div>
+            <div class="nav-sign-link"><a href="logout">Logout</a><img src="../static/icons/logout-icon.svg" alt="Logout-icon"></div>
+        </div>
+    </nav>
+    <!-- asidebar section start -->
+    <aside class="asidebar-container">
+        <div class="asidebar-center wraper padding-left-right-twenty-mobile padding-top-bottom-twenty-mobile">
+            <div class="asidebar-header-section">
+                <div class="asidebar-log-section">
+                    <a href="patient-dashboard"><h2>{{request.user.first_name}}</h2></a>
+                </div>
+                <div class="asidebar-close-section"><img src="../static/icons/close-icon.svg" alt="close-icon"></div>
+            </div>
+            <div class="asidebar-body-section">
+                <div class="asidebar-nav-links-main">
+                <ul class="asidebar-nav-links">
+                    <li><a href="patient-dashboard" class="asidebar-nav-link">Dashboard</a></li>
+                    <li><a href="patient-view-doctor" class="asidebar-nav-link ">Doctor</a></li>
+                    <li><a href="patient-appointment" class="asidebar-nav-link ">Appointment</a></li>
+                    <li><a href="patient-discharge" class="asidebar-nav-link ">Discharge</a></li>
+                </ul>
+            </div>
+            <div class="asidebar-login-section">
+                <a href="/">Logout</a>
+                <img src="../static/icons/logout-icon.svg" alt="logout-icon">
+            </div>
+            <div class="asidebar-social-links-main">
+                <ul class="asidebar-social-links padding-top-bottom-twenty-mobile">
+                    <li class="asidebar-social-link"><a href="#"><img src="../static/icons/linkedin-icon.svg" alt="linkedin-icon"></a></li>
+                    <li class="asidebar-social-link"><a href="#"><img src="../static/icons/whatsapp-icon.svg" alt="whatsapp-icon"></a></li>
+                    <li class="asidebar-social-link"><a href="#"><img src="../static/icons/google-mail-icon.svg" alt="mail-icon"></a></li>
+                    <li class="asidebar-social-link"><a href="#"><img src="../static/icons/facebook-icon.svg" alt="facebook-icon"></a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </aside>
+    <!-- asidebar section end -->
+     <!-- banner page section start -->
+     <div class="banner-page-container">
+        <div class="banner-page-center">
+            <div class="img-component">
+                <img src="../static/asserts/patient-panel-banner.jpg" alt="patient-panel-banner">
+            </div>
+            <div class="banner-page-section padding-top-bottom-fifty-mobile">
+                <div class="banner-page-desc">
+                    <p class="desc padding-left-right-ten-mobile"> “To lose patience is to lose the battle.” —Mahatma Gandhi. </p>
+                </div>
+                <div class="help-button padding-top-bottom-ten-mobile padding-left-right-ten-mobile"><a href="patient-dashboard">Dashboard</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- banner page section end -->
+    <br><br><br><br>
+    <!-- content start-->
+    {% block content %}
+
+
+
+
+
+    {% endblock content %}
+    <!-- content end-->
+
+    <br><br><br><br>
+    <!-- footer section start -->
+<div class="footer-container">
+    <div class="footer-center wraper">
+        <div class="footer-section padding-top-bottom-thirty-mobile">
+            <div class="footer-nav-links-main">
+                <ul class="footer-nav-links padding-top-bottom-twenty-mobile">
+                    <li><a href="patient-dashboard" class="footer-nav-link">Dashboard</a></li>
+                    <li><a href="patient-view-doctor" class="footer-nav-link">Doctor</a></li>
+                    <li><a href="patient-appointment" class="footer-nav-link">Appointment</a></li>
+                    <li><a href="patient-discharge" class="footer-nav-link">Discharge</a></li>
+                </ul>
+            </div>
+            <div class="footer-social-links-main">
+                <ul class="footer-social-links">
+                    <li class="footer-social-link"><a href="#"><img src="../static/icons/linkedin-icon.svg" alt="linkedin-icon"></a></li>
+                    <li class="footer-social-link"><a href="#"><img src="../static/icons/whatsapp-icon.svg" alt="whatsapp-icon"></a></li>
+                    <li class="footer-social-link"><a href="#"><img src="../static/icons/google-mail-icon.svg" alt="mail-icon"></a></li>
+                    <li class="footer-social-link"><a href="#"><img src="../static/icons/facebook-icon.svg" alt="facebook-icon"></a></li>
+                </ul>
+            </div>
+            <div class="footer-desc padding-left-right-ten-mobile">
+                <p class="desc">Copyright 2022 -<span id="getdata"></span>,Developed By Gullapalli Jyothi Kiran.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer section end -->
+ <!-- javascript section start -->
+ <script src="../static/js/footer.js"></script>
+ <script src="../static/js/nav-side-bar.js"></script>
+ <!-- javascript section end-->
+</body>
+</html>

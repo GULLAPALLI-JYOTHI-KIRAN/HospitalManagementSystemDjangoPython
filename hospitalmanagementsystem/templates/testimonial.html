@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+        /* testimonial css code start */
+.testimonial-container{
+    width: 100%;
+    background-color: #393E46;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.testimonial-center{
+    width:100%
+}
+.testimonial-section{
+    width: 100%;
+    display: flex!important;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 20px;
+    z-index: 4;
+    overflow:hidden;
+}
+.testimonial-section::-webkit-scrollbar{
+    width: 0px;
+}
+.width-sized{
+    width: 20%;
+}
+.each-testimonial{
+    background-color: white;
+    width: 400px;
+    height: 450px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.review-info .review-desc{
+    text-align: justify;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    white-space: normal;
+    word-spacing: 0.2rem;
+}
+.patient-name{
+    padding-top: 20px;
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+}
+.person-title{
+    padding-top: 2px;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}
+.each-testimonial:hover{
+    -webkit-box-shadow: 2px 2px 58px -16px rgba(255,252,255,1);
+    -moz-box-shadow: 2px 2px 58px -16px rgba(255,252,255,1);
+    box-shadow: 2px 2px 58px -16px rgba(255,252,255,1);
+    transition: all .3s linear;
+}
+/* testimonial css code end */
+    </style>
+</head>
+<body>
+    <!--Testimonial  section start -->
+    <div class="testimonial-container">
+        <div class="testimonial-center wraper">
+            <div class="section-heading padding-top-bottom-thirty-mobile ">
+                <h3 class="section-title">Testimonial</h3>
+                <div class="underline width-sized"></div>
+            </div>
+            <section  class="testimonial-section padding-left-right-twenty-mobile padding-top-bottom-fifty-mobile">
+                    <article class="each-testimonial padding-left-right-twenty-mobile padding-top-bottom-thirty-mobile">
+                        <div class="review-info">
+                            <p class="review-desc">The services that I receive from Dr. Siddhartha Mukherjee is excellent. Dr. Siddhartha Mukherjee and the staff are friendly and ensure that I am properly informed about my health and care. I would have no qualms in recommending them to friendly and friends.</p>
+                        </div>
+                        <h4 class="patient-name ">Ryan</h4>
+                        <p class="person-title">patient</p>
+                    </article>
+                    <article class="each-testimonial padding-left-right-twenty-mobile padding-top-bottom-thirty-mobile">
+                        <div class="review-info">
+                            <p class="review-desc">Dr. William A. Abdu is incredible. Not only has she taken great care of my health, but also she is lovely to speak with at every appointment. It’s rare to find a doctor that combines such personal touches and care for a patient as a person with outstanding quality of medical care. I highly recommend becoming her patient!.</p>
+                        </div>
+                        <h4 class="patient-name ">Jeff</h4>
+                        <p class="person-title">patient</p>
+                    </article>
+                    <article class="each-testimonial padding-left-right-twenty-mobile padding-top-bottom-thirty-mobile">
+                        <div class="review-info">
+                            <p class="review-desc">Dr. Surbhi Anand did a great job with my first ever health exam. She explained everything to me in a very clear manner. She was also kind and friendly. All of the staff was great – they were helpful, patient and helped with my insurance.</p>
+                        </div>
+                        <h4 class="patient-name ">Carmen</h4>
+                        <p class="person-title">patient</p>
+                    </article>
+                    <article class="each-testimonial padding-left-right-twenty-mobile padding-top-bottom-thirty-mobile">
+                        <div class="review-info">
+                            <p class="review-desc">Dr. Gagan Gautam is a great doctor! He’s very understanding and listens to your concerns. He takes time with the patient to help them with their health issues! I highly recommend him to anyone looking for a specialist.</p>
+                        </div>
+                        <h4 class="patient-name ">Tim</h4>
+                        <p class="person-title">patient</p>
+                    </article>
+                    <article class="each-testimonial padding-left-right-twenty-mobile padding-top-bottom-thirty-mobile">
+                        <div class="review-info">
+                            <p class="review-desc">This practice is terrific.Dr. Sanjay Sachdeva combines expertise and a willingness to listen and discuss. She’s also an excellent surgeon. Also, the staff is very friendly and professional. I’ve never had to wait more than a few minutes when I arrive on time for an appointment</p>
+                        </div>
+                        <h4 class="patient-name ">Marina</h4>
+                        <p class="person-title">patient</p>
+                    </article>
+                    <article class="each-testimonial padding-left-right-twenty-mobile padding-top-bottom-thirty-mobile">
+                        <div class="review-info">
+                            <p class="review-desc">Great medical office, wonderful and warm experience from start to finish. Appreciate Dr. Ashish Sabharwal taking time to go over the diagnosis clearly and treatment options. Was referred over by my general doctor and can see why. Highly recommended.</p>
+                        </div>
+                        <h4 class="patient-name ">Anthony</h4>
+                        <p class="person-title">patient</p>
+                    </article>
+            </section>
+            <div class="sliders-arrow-section padding-top-bottom-ten-mobile border-color">
+                <img src="../static/asserts/arrow-back.png" alt="arrow-back" id="scroll-back" class="border-color width-up">
+                <img src="../static/asserts/arrow-forward.png" alt="arrow-forward" id="scroll-front" class="border-color width-up">
+            </div>
+        </div>
+    </div>
+    <!--Testimonial  section end -->
+     <!-- javascript section start -->
+     <script src="../static/js/testimonial.js"></script>
+     <!-- javascript section end-->
+</body>
+</html>

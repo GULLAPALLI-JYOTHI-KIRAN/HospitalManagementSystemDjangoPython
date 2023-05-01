@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System || Gullapalli Jyothi Kiran</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="shortcut icon" href="../static/icons/favicon.svg" type="image/x-icon">
+
+
+    <style>
+        /* quick geasture css code start */
+.quick-geasture-container{
+    width:100%;
+}
+.quick-geasture-center{
+    width:100%
+}
+.quick-geasture-section{
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.each-geasture{
+    width:100%;
+    
+}
+.each-geasture:nth-child(1){
+    border-right: 3px black solid;
+    border-bottom: 3px black solid;
+}
+.each-geasture:nth-child(3){
+    border-right: 3px black solid;
+}
+
+.each-geasture:nth-child(2){
+    border-bottom: 3px black solid;
+}
+.geasture-icon a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+    color: #551a8b !important;
+}
+.geasture-icon img{
+    width: 50px;
+}
+.geasture-desc{
+    font-size: 1.6rem;
+    text-align: center;
+}
+/* two column grid layout */
+.two-column-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* quick geasture css code end */
+.feedback-section{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.form-info{
+    width: 100%;
+}
+.feedback-info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+.text-input-enter{
+    width: 100%;
+    border: none;
+    outline: 2px black solid;
+    outline-offset: 5px;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+}
+.text-input-enter::placeholder{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+.text-input-enter:focus{
+    outline-color:cornflowerblue ;
+}
+.comment-box{
+    font-size: 1.5rem;
+    width: 100%;
+    resize: vertical;
+    border: none;
+    outline: 2px black solid;
+    outline-offset: 5px;
+    border-radius: 2px;
+    padding-left: 10px;
+    padding-top: 15px;
+}
+.comment-box::placeholder{
+    font-size: 1.5rem;
+}
+.comment-box:focus{
+    outline-color:cornflowerblue ;
+}
+@media screen and (min-width:992px) {
+    .nav-center{
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content:space-between !important ;
+        align-items: center !important;
+    }
+    /* quick-geasture css code */
+    /* two column grid layout */
+    .two-column-layout{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .each-geasture{
+        border-bottom:3px black solid ;
+    }
+    .each-geasture:nth-child(2){
+        border-right: 3px black  solid;
+    }
+    .geasture-desc{
+        font-size: 2.2rem;
+    }
+    .each-feedback .img-component{
+        aspect-ratio: 850/650 !important;
+        overflow: hidden;
+    }
+    .feedback-section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 30px;
+        column-gap: 20px;
+        justify-content: baseline;
+        align-items: center;
+    }
+    .feedback-info{
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+    }
+}
+</style>
+<link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    {% include "navbar.html" %}
+    {% include "banner.html"%}
+    {% include "quickgeasture.html"%}
+    <!-- Contact Us section start -->
+    <div class="contact-container">
+        <div class="contact-center wraper">
+            <div class="section-heading padding-top-bottom-thirty-mobile ">
+                <h3 class="section-title">Get Touch With Us</h3>
+                <p class="title-desc padding-left-right-ten-mobile">Feel free to enquire us.Our team will contact you within 24 hrs.</p>
+            </div>
+            <section class="contact-section contact-three-column-layout padding-top-bottom-fifty-mobile padding-left-right-twenty-mobile">
+                <article class="each-contact-info padding-top-bottom-ten-mobile">
+                    <div class="contact-header padding-left-right-ten-mobile">
+                        <img src="../static/asserts/route-map-icon.png" alt="route-map-icon">
+                        <h4 class="heading">Hospital Address</h4>
+                    </div>
+                    <div class="contact-info padding-left-right-ten-mobile">
+                        <p class="info">NH 16 Service Rd,<br> Beside NTR Health University,<br> Gunadala, Vijayawada,<br> Andhra Pradesh 520008</p>
+                    </div>
+                </article>
+                <article class="each-contact-info padding-top-bottom-ten-mobile">
+                    <div class="contact-header padding-left-right-ten-mobile">
+                        <img src="../static/asserts/phone-call-icon.png" alt="phone-call-icon">
+                        <h4 class="heading">Contact Number</h4>
+                    </div>
+                    <div class="contact-info padding-left-right-ten-mobile">
+                        <p class="info">9845672391,7352190422,<br> 9357027382,9472853766</p>
+                    </div>
+                </article>
+                <article class="each-contact-info padding-top-bottom-ten-mobile">
+                    <div class="contact-header padding-left-right-ten-mobile">
+                        <img src="../static/asserts/email-id-icon.png" alt="email-id-icon">
+                        <h4 class="heading">Email Id</h4>
+                    </div>
+                    <div class="contact-info padding-left-right-ten-mobile">
+                        <p class="info">hospital@gmail.com</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+    <!-- Contact Us section end -->
+    <!-- Feedback section start -->
+    <div class="feedback-container">
+        <div class="feedback-center wraper">
+            <div class="section-heading padding-top-bottom-thirty-mobile ">
+                <h3 class="section-title">Send Us Your Valuable Feedback</h3>
+                <div class="underline"></div>
+            </div>
+            <section class="feedback-section padding-left-right-twenty-mobile">
+                <article class="each-feedback padding-left-right-twenty-mobile padding-top-bottom-thirty-mobile">
+                    <div class="img-component">
+                        <img src="../static/asserts/feedback.jpg" alt="feedback">
+                    </div>
+                    <!-- <div class="feedback-form-section padding-left-right-twenty-mobile padding-top-bottom-thirty-mobile">
+                        <form method="POST">
+                             Very Important csrf Token 
+                            {% csrf_token %}
+                            <div class="form-group">
+                              <p>
+                              <h3>{{ form.as_p }}</h3>
+                              </p>
+                              <br>
+                              <input type="submit" value="Send Message" class='btn btn-primary btn-lg'>
+                            </div>
+                          </form>
+                    </div> -->
+                </article>
+                <article class="form-info">
+                    <div class="feedback-info ">
+                        <form method="POST">
+                            {% csrf_token %} 
+                            <!-- Very Important csrf Token  -->
+                            {% render_field form.Name class="text-input-enter " placeholder="Enter Your Name" %}<br>
+                            <br>
+                            <br>
+                            {% render_field form.Email class="text-input-enter " placeholder="Enter Your Email" %} 
+                            <br>
+                            <br>
+                            <br>
+                            {% render_field form.Message class="comment-box" cols="35" rows="7" placeholder="Please Write Your Feedback" %} 
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <input type="submit" value="Send Message" class='btn btn-primary btn-lg'>
+                        </form>
+                        <!-- <input type="text"  class="text-input-enter " placeholder="Enter Your Name"/>
+                        <input type="text"  class="text-input-enter " placeholder="Enter Your Email"/>
+                        <textarea name="" id=""  class="comment-box" cols="55" rows="7" placeholder="Please Write Your Feedback "></textarea> -->
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+    <!-- Feedback section end -->
+    {% include "footer.html" %}
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends 'admin_base.html' %}
+{% block content %}
+{% load static %}
+ <!-- table section start -->
+ <div class="table-container">
+  <div class="table-center  padding-left-right-twenty-mobile">
+    <table>
+      <thead>
+        <tr >
+          <th colspan="4" class="text-center heading-color">Appointments</th>
+        </tr>
+        <tr class="bg-color-black">
+          <th>Doctor Name</th>
+          <th>Patient Name</th>
+          <th>Description</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for a in appointments %}
+      <tr>
+        <td> {{a.doctorName}}</td>
+        <td>{{a.patientName}}</td>
+        <td>{{a.description}}</td>
+        <td>{{a.appointmentDate}}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+<!-- table section end -->
+
+{% endblock content %}

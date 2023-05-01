@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+        /* navbar css code start */
+.nav-bar-container{
+    font-family: 'Times New Roman', Times, serif !important;
+    background: #833ab4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width:100%;
+    min-height: 60px;
+    z-index: 10;
+}
+.nav-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between !important;
+} 
+.nav-log-section{
+    overflow: hidden;
+    border: 2px white solid;
+    padding: 4px 7px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px white;
+    -moz-box-shadow:0px 0px 20px white;
+    -webkit-box-shadow:0px 0px 20px white;
+}
+@keyframes auto-zoom {
+    0%{
+        transform: scale(1.4);
+        transition: all 1s linear;
+    }
+    10%{
+        transform: scale(1.1);
+        transition: all 2s linear;
+    }
+    20%{
+        transform: scale(0.9);
+        transition: all 2s linear;
+    }
+    30%{
+        transform: scale(0.8);
+        transition: all 2s linear;
+    }
+    40%{
+        transform: scale(0.9);
+        transition: all 1s linear;
+    }
+    50%{
+        transform: scale(1.1);
+        transition: all 3s linear;
+    }
+    60%{
+        transform: scale(1.2);
+        transition: all 2s linear;
+    }
+    70%,80%{
+        transform: scale(1.3)translateX(8px);
+        transition: all 2s linear;
+    }
+    90%,100%{
+        transform: scale(1.5) translateX(5px);
+        transition: all 3s linear;
+    }
+    
+}
+.nav-log-section img{
+    width: 70px;
+    animation: auto-zoom 2s linear 0ms infinite forwards normal;
+}
+.hambuger-menu img{
+    width: 60px;
+    cursor: pointer;
+}
+.nav-links-main{
+    display: none;
+}
+.nav-sign-link{
+    display: none;
+}
+/* navbar css code end */
+/* asidebar css code start */
+.asidebar-container{
+    width:100%;
+    min-height: 100vh;
+    background: #833ab4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: fixed;
+    top:0px;
+    left: -100%;
+    z-index: 10;
+}
+.asidebar-center{
+    width:100%;
+}
+.asidebar-header-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.asidebar-log-section{
+    overflow: hidden;
+    border: 2px white solid;
+    padding: 4px 7px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px white;
+    -moz-box-shadow:0px 0px 20px white;
+    -webkit-box-shadow:0px 0px 20px white;
+}
+@keyframes auto-zoom {
+    0%{
+        transform: scale(1.4);
+        transition: all 1s linear;
+    }
+    10%{
+        transform: scale(1.1);
+        transition: all 2s linear;
+    }
+    20%{
+        transform: scale(0.9);
+        transition: all 2s linear;
+    }
+    30%{
+        transform: scale(0.8);
+        transition: all 2s linear;
+    }
+    40%{
+        transform: scale(0.9);
+        transition: all 1s linear;
+    }
+    50%{
+        transform: scale(1.1);
+        transition: all 3s linear;
+    }
+    60%{
+        transform: scale(1.2);
+        transition: all 2s linear;
+    }
+    70%,80%{
+        transform: scale(1.3)translateX(8px);
+        transition: all 2s linear;
+    }
+    90%,100%{
+        transform: scale(1.5) translateX(5px);
+        transition: all 3s linear;
+    }
+    
+}
+.asidebar-log-section img{
+    width:60px;
+    animation: auto-zoom 2s linear 0ms infinite forwards normal;
+}
+.asidebar-close-section img{
+    width: 60px;
+    cursor: pointer;
+}
+.asidebar-body-section{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+}
+.asidebar-nav-links-main{
+    width:100%
+}
+.asidebar-nav-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+}
+.asidebar-nav-link{
+    font-size: 2.2rem;
+    color: white;
+    font-weight: bolder;
+    letter-spacing: 0.3rem;
+    padding: 5px 7px 5px 7px;
+    border-radius: 5px;
+}
+.asidebar-nav-link:hover{
+    border: 4px white solid;
+    transition: all .3s linear;
+}
+.active{
+    background-color: white;
+    color: rgb(48,48,48);
+}
+.asidebar-social-links-main{
+    width:100%;
+}
+.asidebar-social-links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.asidebar-social-link img{
+    width:40px;
+}
+.asidebar-social-link{
+    padding: 4px 7px;
+    border: 4px white solid;
+    border-radius: 10px;
+}
+.asidebar-social-link:hover{
+    transform: scale(0.9);
+    box-shadow: 0px 0px 20px white;
+    -moz-box-shadow:0px 0px 20px white;
+    -webkit-box-shadow:0px 0px 20px white;
+    transition: all .3s linear;
+}
+.asidebar-login-section{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    padding: 4px 15px;
+    border: 5px white solid;
+    border-radius: 15px;
+}
+.asidebar-login-section a{
+    color: white !important;
+    font-size: 1.9rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.2rem;
+}
+.asidebar-login-section img{
+    width: 50px;
+}
+.asidebar-login-section:hover{
+    transform: scale(0.9);
+    box-shadow: 0px 0px 20px white;
+    -moz-box-shadow:0px 0px 20px white;
+    -webkit-box-shadow:0px 0px 20px white;
+    transition: all .3s linear;
+}
+/* asidebar css code end */
+        @media screen and (min-width:992px) {
+            /* nav bar css code */
+    .hambuger-menu{
+        display: none;
+    }
+    .nav-bar-container{
+        width:100%;
+        min-height: 95px;
+    }
+    .nav-center{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: center !important;
+    }
+    .nav-log-section{
+        width: 100px;
+        flex-shrink: 3;
+    }
+    .nav-log-section img{
+        width: 85px;
+    }
+    .nav-links-main{
+        display: block;
+    }
+    .nav-links{
+        display: flex;
+        flex-direction: row;
+        column-gap: 23px;
+    }
+    .nav-link{
+        font-size: 2.2rem;
+        color: white ;
+        font-weight: bolder;
+        letter-spacing: 0.3rem;
+        padding: 5px 7px 5px 7px;
+        border-radius: 5px;
+    }
+    .nav-link:hover{
+        background-color: white;
+        color: rgb(48, 48, 48);
+        transition: all .3s linear;
+    }
+    .active{
+        background-color: white;
+        color: rgb(48,48,48);
+    }
+    .nav-sign-link{
+        border: 3px white solid;
+        display:flex ;
+        padding: 5px 8px ;
+        border-radius: 5px ;
+        cursor: pointer ;
+    }
+    .nav-sign-link a{
+        color: white ;
+        font-size: 1.9rem ;
+        font-weight: bold ;
+        text-align: center !important;
+        letter-spacing: 0.2rem ;
+    }
+    .nav-sign-link img{
+        width: 40px ;
+    }
+    .nav-sign-link:hover{
+        transform: translateX(-5px) !important;
+        box-shadow: 0px 0px 20px white;
+        transition: all 1s linear;
+    }
+        }
+    </style>
+</head>
+<body>
+     <!-- Nav-bar section start -->
+    <nav class="nav-bar-container">
+        <div class="nav-center  padding-left-right-twenty-mobile padding-top-bottom-twenty-mobile">
+            <div class="nav-log-section">
+                <a href="/"><img src="../static/icons/hospital-icon.svg" alt="hospital-icon"></a>
+            </div>
+            <div class="hambuger-menu">
+                <img src="../static/icons/hamburger-menu-icon.svg" alt="hambuger-menu" id="menu-bttn">
+            </div>
+            <div class="nav-links-main">
+                <ul class="nav-links">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="aboutus" class="nav-link">About</a></li>
+                    <li><a href="doctor" class="nav-link">Doctors</a></li>
+                    <li><a href="service" class="nav-link">Services</a></li>
+                    <li><a href="contactus" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-sign-link"><a href="loginpage">Login </a><img src="../static/icons/login-icon.svg" alt=""></div>
+        </div>
+    </nav>
+    <!-- asidebar section start -->
+    <aside class="asidebar-container">
+        <div class="asidebar-center wraper padding-left-right-twenty-mobile padding-top-bottom-twenty-mobile">
+            <div class="asidebar-header-section">
+                <div class="asidebar-log-section">
+                    <a href="/"><img src="../static/icons/hospital-icon.svg" alt="hospital-icon"></a>
+                </div>
+                <div class="asidebar-close-section"><img src="../static/icons/close-icon.svg" alt="close-icon"></div>
+            </div>
+            <div class="asidebar-body-section">
+                <div class="asidebar-nav-links-main">
+                <ul class="asidebar-nav-links">
+                    <li><a href="/" class="asidebar-nav-link">Home</a></li>
+                    <li><a href="aboutus" class="asidebar-nav-link ">About</a></li>
+                    <li><a href="doctor" class="asidebar-nav-link ">Doctors</a></li>
+                    <li><a href="service" class="asidebar-nav-link ">Services</a></li>
+                    <li><a href="contactus" class="asidebar-nav-link ">Contact</a></li>
+                </ul>
+            </div>
+            <div class="asidebar-login-section">
+                <a href="loginpage">Login</a>
+                <img src="../static/icons/login-icon.svg" alt="login-icon">
+            </div>
+            <div class="asidebar-social-links-main">
+                <ul class="asidebar-social-links padding-top-bottom-twenty-mobile">
+                    <li class="asidebar-social-link"><a href="#"><img src="../static/icons/linkedin-icon.svg" alt="linkedin-icon"></a></li>
+                    <li class="asidebar-social-link"><a href="#"><img src="../static/icons/whatsapp-icon.svg" alt="whatsapp-icon"></a></li>
+                    <li class="asidebar-social-link"><a href="#"><img src="../static/icons/google-mail-icon.svg" alt="mail-icon"></a></li>
+                    <li class="asidebar-social-link"><a href="#"><img src="../static/icons/facebook-icon.svg" alt="facebook-icon"></a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </aside>
+    <!-- asidebar section end -->
+    <script src="../static/js/nav-side-bar.js"></script>
+</body>
+</html>

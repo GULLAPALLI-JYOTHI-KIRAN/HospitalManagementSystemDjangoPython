@@ -1,0 +1,38 @@
+{% extends 'doctor_base.html' %}
+{% block content %}
+{% load static %}
+<!-- table section start -->
+<div class="table-container">
+  <div class="table-center  padding-left-right-twenty-mobile">
+    <table>
+      <thead>
+        <tr >
+          <th colspan="6" class="text-center heading-color">Your Discharged Patient List</th>
+        </tr>
+        <tr class="bg-color-black">
+          <th>Name</th>
+
+          <th>Admit Date</th>
+          <th>Release Date</th>
+          <th>Symptoms</th>
+          <th>Mobile</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in dischargedpatients %}
+      <tr>
+        <td> {{p.patientName}}</td>
+        <td>{{p.admitDate}}</td>
+        <td>{{p.releaseDate}}</td>
+        <td>{{p.symptoms}}</td>
+        <td>{{p.mobile}}</td>
+        <td>{{p.address}}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- table section end -->
+{% endblock content %}
