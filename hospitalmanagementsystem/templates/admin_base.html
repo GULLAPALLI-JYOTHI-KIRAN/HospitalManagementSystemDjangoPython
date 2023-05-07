@@ -48,17 +48,18 @@
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 30px;
-    overflow: scroll;
+    overflow: auto;
     justify-content: center;
     align-items: center;
 }
 .table-center{
+    transform: scale(0.7);
     margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    overflow: scroll;
+    overflow: hidden;
   }
   table{
     border-radius: 5px;
@@ -92,7 +93,7 @@
         grid-template-columns: 1fr 1fr;
         row-gap: 30px;
         column-gap: 40px;
-        overflow: scroll;
+        overflow: hidden;
         align-items: start;
         justify-items: center;
     }
